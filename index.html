@@ -17,192 +17,243 @@
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden}
 
-/* ===================== NAV ===================== */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 3.5rem;background:rgba(10,10,10,0.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
-.logo{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;letter-spacing:.18em;color:var(--accent);text-transform:uppercase}
-.nav-links{display:flex;align-items:center;gap:2.5rem}
-.nav-links a{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted2);text-decoration:none;transition:color .2s}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:rgba(10,10,10,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.logo{font-family:'Playfair Display',serif;font-size:.9rem;font-weight:700;letter-spacing:.15em;color:var(--accent);text-transform:uppercase;flex-shrink:0}
+.nav-links{display:flex;align-items:center;gap:1.5rem}
+.nav-links a{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted2);text-decoration:none;transition:color .2s;white-space:nowrap}
 .nav-links a:hover{color:var(--text)}
-.nav-cta{font-size:.7rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:.5rem 1.4rem;text-decoration:none;transition:all .3s}
+.nav-cta{font-size:.65rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:.45rem 1rem;text-decoration:none;transition:all .3s;white-space:nowrap}
 .nav-cta:hover{background:var(--accent);color:var(--bg)}
 
-/* ===================== HERO ===================== */
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:9rem 3.5rem 5rem;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-300px;right:-300px;width:800px;height:800px;background:radial-gradient(circle,rgba(196,164,107,.06) 0%,transparent 70%);pointer-events:none}
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:8rem 2rem 4rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-300px;right:-300px;width:700px;height:700px;background:radial-gradient(circle,rgba(196,164,107,.06) 0%,transparent 70%);pointer-events:none}
 .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--border)}
-.tag{display:inline-flex;align-items:center;gap:.6rem;font-size:.65rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:2rem}
-.tag::before{content:'';display:block;width:2rem;height:1px;background:var(--accent)}
-h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,6.5vw,6.5rem);font-weight:900;line-height:.95;letter-spacing:-.02em;max-width:850px;margin-bottom:2rem}
+.tag{display:inline-flex;align-items:center;gap:.6rem;font-size:.6rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1.8rem}
+.tag::before{content:'';display:block;width:1.5rem;height:1px;background:var(--accent)}
+h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,10vw,6.5rem);font-weight:900;line-height:.95;letter-spacing:-.02em;margin-bottom:1.8rem}
 h1 em{font-style:italic;color:var(--accent)}
-.hero-sub{font-size:1rem;color:var(--muted2);max-width:480px;line-height:1.8;margin-bottom:1rem}
-.hero-for{font-size:.8rem;color:var(--muted);margin-bottom:3rem;max-width:480px;line-height:1.7}
+.hero-sub{font-size:.95rem;color:var(--muted2);line-height:1.8;margin-bottom:.8rem}
+.hero-for{font-size:.78rem;color:var(--muted);margin-bottom:2.5rem;line-height:1.7}
 .hero-for strong{color:var(--muted2);font-weight:400}
-.hero-actions{display:flex;align-items:center;gap:2rem}
-.btn-gold{background:var(--accent);color:var(--bg);font-size:.75rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:1rem 2.5rem;border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:all .3s}
-.btn-gold:hover{background:var(--accent2);transform:translateY(-2px)}
-.btn-ghost{font-size:.75rem;color:var(--muted2);text-decoration:none;display:flex;align-items:center;gap:.5rem;transition:color .2s}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:1.2rem}
+.btn-gold{background:var(--accent);color:var(--bg);font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:.9rem 2rem;border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:all .3s}
+.btn-gold:hover{background:var(--accent2)}
+.btn-ghost{font-size:.72rem;color:var(--muted2);text-decoration:none;display:flex;align-items:center;gap:.4rem;transition:color .2s}
 .btn-ghost:hover{color:var(--text)}
 .btn-ghost::after{content:'↓'}
 
-/* ===================== STATS ===================== */
+/* STATS */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.stat{padding:2rem 2.5rem;border-right:1px solid var(--border)}
+.stat{padding:1.5rem 1.2rem;border-right:1px solid var(--border);text-align:center}
 .stat:last-child{border-right:none}
-.stat-num{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;color:var(--accent);line-height:1;margin-bottom:.3rem}
-.stat-label{font-size:.68rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.stat-num{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,4vw,2.5rem);font-weight:700;color:var(--accent);line-height:1;margin-bottom:.25rem}
+.stat-label{font-size:.58rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;line-height:1.3}
 
-/* ===================== SECTIONS ===================== */
-.section{padding:6rem 3.5rem}
-.s-tag{font-size:.65rem;letter-spacing:.25em;text-transform:uppercase;color:var(--accent);margin-bottom:.8rem;display:flex;align-items:center;gap:.6rem}
-.s-tag::before{content:'';display:block;width:1.2rem;height:1px;background:var(--accent)}
-.s-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,3rem);font-weight:700;line-height:1.1;margin-bottom:.8rem}
-.s-subtitle{font-size:.9rem;color:var(--muted2);line-height:1.75;max-width:550px;margin-bottom:3rem}
-.divider{height:1px;background:var(--border);margin:0 3.5rem}
+/* SECTIONS */
+.section{padding:5rem 2rem}
+.s-tag{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:.7rem;display:flex;align-items:center;gap:.5rem}
+.s-tag::before{content:'';display:block;width:1rem;height:1px;background:var(--accent)}
+.s-title{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,5vw,3rem);font-weight:700;line-height:1.1;margin-bottom:.8rem}
+.s-subtitle{font-size:.85rem;color:var(--muted2);line-height:1.75;margin-bottom:2.5rem}
+.divider{height:1px;background:var(--border);margin:0 2rem}
 
-/* ===================== VIDEO ===================== */
-.video-wrap{position:relative;aspect-ratio:16/9;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;overflow:hidden;max-width:860px}
+/* VIDEO */
+.video-wrap{position:relative;aspect-ratio:16/9;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;overflow:hidden;width:100%}
 .video-wrap::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(196,164,107,.04) 0%,transparent 60%)}
-.play-ring{width:68px;height:68px;border:1.5px solid var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:1.3rem;transition:all .3s;position:relative;z-index:1}
+.play-ring{width:60px;height:60px;border:1.5px solid var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:1.2rem;transition:all .3s;position:relative;z-index:1}
 .video-wrap:hover .play-ring{background:var(--accent);color:var(--bg);transform:scale(1.1)}
-.vid-badge{position:absolute;top:1.2rem;left:1.2rem;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);background:rgba(10,10,10,.7);padding:.3rem .7rem;border:1px solid var(--border)}
+.vid-badge{position:absolute;top:1rem;left:1rem;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:rgba(10,10,10,.8);padding:.3rem .6rem;border:1px solid var(--border)}
 
-/* ===================== MODULES ===================== */
-.modules-intro{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-bottom:3rem}
-.modules-intro-right{display:flex;flex-direction:column;gap:1rem;padding-top:1rem}
-.highlight-box{background:var(--surface);border:1px solid var(--border);padding:1.2rem 1.5rem}
-.highlight-box strong{display:block;font-size:.8rem;font-weight:500;color:var(--text);margin-bottom:.3rem}
-.highlight-box span{font-size:.75rem;color:var(--muted2);line-height:1.6}
-.modules-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border)}
-.mod{background:var(--bg);padding:2rem 2.2rem;display:flex;gap:1.5rem;align-items:flex-start;transition:background .25s}
+/* MODULES INTRO */
+.modules-intro{display:flex;flex-direction:column;gap:1.5rem;margin-bottom:2.5rem}
+.highlight-boxes{display:flex;flex-direction:column;gap:.8rem}
+.highlight-box{background:var(--surface);border:1px solid var(--border);padding:1rem 1.2rem}
+.highlight-box strong{display:block;font-size:.78rem;font-weight:500;color:var(--text);margin-bottom:.25rem}
+.highlight-box span{font-size:.72rem;color:var(--muted2);line-height:1.6}
+
+/* MODULES GRID */
+.modules-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--border)}
+.mod{background:var(--bg);padding:1.5rem;display:flex;gap:1.2rem;align-items:flex-start;transition:background .25s}
 .mod:hover{background:var(--surface)}
-.mod-num{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:rgba(196,164,107,.18);line-height:1;flex-shrink:0;width:2.5rem}
-.mod-body h3{font-size:.85rem;font-weight:500;color:var(--text);margin-bottom:.5rem}
-.mod-body p{font-size:.75rem;color:var(--muted2);line-height:1.65}
-.mod-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.7rem}
-.mod-tag{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(196,164,107,.25);padding:.2rem .5rem}
+.mod-num{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:rgba(196,164,107,.2);line-height:1;flex-shrink:0;width:2rem}
+.mod-body h3{font-size:.82rem;font-weight:500;color:var(--text);margin-bottom:.4rem}
+.mod-body p{font-size:.72rem;color:var(--muted2);line-height:1.65}
+.mod-tags{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.6rem}
+.mod-tag{font-size:.55rem;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(196,164,107,.25);padding:.15rem .45rem}
 
-/* ===================== TRACK RECORD ===================== */
-.tr-section{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:6rem 3.5rem}
-.tr-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:center}
-.tr-preview{background:var(--bg);border:1px solid var(--border);overflow:hidden}
-.tr-header{background:var(--surface2);padding:.8rem 1.2rem;display:flex;align-items:center;gap:.8rem;border-bottom:1px solid var(--border)}
-.tr-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);animation:pulse 2s ease infinite}
-.tr-title-bar{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted2)}
-.tr-table{width:100%;border-collapse:collapse}
-.tr-table th{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:.7rem 1rem;text-align:left;border-bottom:1px solid var(--border);font-weight:400}
-.tr-table td{font-size:.72rem;padding:.65rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);color:var(--muted2)}
+/* TRACK RECORD */
+.tr-section{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:5rem 2rem}
+.tr-grid{display:flex;flex-direction:column;gap:3rem}
+.tr-preview{background:var(--bg);border:1px solid var(--border);overflow:hidden;width:100%}
+.tr-header{background:var(--surface2);padding:.7rem 1rem;display:flex;align-items:center;gap:.7rem;border-bottom:1px solid var(--border)}
+.tr-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 2s ease infinite;flex-shrink:0}
+.tr-title-bar{font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted2)}
+.tr-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tr-table{width:100%;border-collapse:collapse;min-width:340px}
+.tr-table th{font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:.6rem .8rem;text-align:left;border-bottom:1px solid var(--border);font-weight:400;white-space:nowrap}
+.tr-table td{font-size:.68rem;padding:.55rem .8rem;border-bottom:1px solid rgba(255,255,255,.04);color:var(--muted2);white-space:nowrap}
 .tr-table td:first-child{color:var(--text)}
 .win{color:#4ade80!important;font-weight:500}
 .loss{color:#f87171!important;font-weight:500}
-.tr-footer{padding:.7rem 1rem;display:flex;justify-content:space-between;font-size:.65rem;color:var(--muted)}
+.tr-footer{padding:.6rem 1rem;display:flex;justify-content:space-between;font-size:.6rem;color:var(--muted);flex-wrap:wrap;gap:.3rem}
 .tr-footer strong{color:var(--accent)}
-.tr-features{display:flex;flex-direction:column;gap:1.5rem}
-.tr-feat{display:flex;gap:1.2rem;align-items:flex-start}
-.tr-feat-icon{width:36px;height:36px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
-.tr-feat-body h4{font-size:.85rem;font-weight:500;color:var(--text);margin-bottom:.3rem}
-.tr-feat-body p{font-size:.75rem;color:var(--muted2);line-height:1.65}
+.tr-features{display:flex;flex-direction:column;gap:1.2rem}
+.tr-feat{display:flex;gap:1rem;align-items:flex-start}
+.tr-feat-icon{width:34px;height:34px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
+.tr-feat-body h4{font-size:.82rem;font-weight:500;color:var(--text);margin-bottom:.25rem}
+.tr-feat-body p{font-size:.72rem;color:var(--muted2);line-height:1.65}
 
-/* ===================== FOR WHO ===================== */
-.for-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:2.5rem}
-.for-card{background:var(--bg);padding:2.5rem 2rem;transition:background .25s}
+/* FOR WHO */
+.for-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--border);border:1px solid var(--border);margin-top:2rem}
+.for-card{background:var(--bg);padding:1.8rem 1.5rem;transition:background .25s}
 .for-card:hover{background:var(--surface)}
-.for-icon{font-size:1.5rem;margin-bottom:1.2rem}
-.for-card h3{font-size:.9rem;font-weight:500;margin-bottom:.7rem}
-.for-card p{font-size:.75rem;color:var(--muted2);line-height:1.7}
-.notfor-list{display:flex;flex-direction:column;gap:.6rem;margin-top:1.5rem}
-.notfor-item{display:flex;align-items:flex-start;gap:.8rem;font-size:.8rem;color:var(--muted2);line-height:1.6}
-.notfor-item::before{content:'×';color:#f87171;flex-shrink:0;font-size:.9rem;margin-top:1px}
+.for-icon{font-size:1.3rem;margin-bottom:1rem}
+.for-card h3{font-size:.85rem;font-weight:500;margin-bottom:.6rem}
+.for-card p{font-size:.72rem;color:var(--muted2);line-height:1.7}
+.notfor-list{display:flex;flex-direction:column;gap:.5rem;margin-top:1.2rem}
+.notfor-item{display:flex;align-items:flex-start;gap:.7rem;font-size:.78rem;color:var(--muted2);line-height:1.6}
+.notfor-item::before{content:'×';color:#f87171;flex-shrink:0;font-size:.85rem;margin-top:1px}
 
-/* ===================== TESTIMONIALS ===================== */
-.testimonials{padding:6rem 3.5rem;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
-.testi{background:var(--bg);border:1px solid var(--border);padding:2rem}
-.testi-quote{font-size:.82rem;color:var(--muted2);line-height:1.75;margin-bottom:1.5rem;font-style:italic}
-.testi-author{display:flex;align-items:center;gap:.8rem}
-.testi-avatar{width:32px;height:32px;border-radius:50%;background:rgba(196,164,107,.15);border:1px solid rgba(196,164,107,.2);display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:500;color:var(--accent)}
-.testi-name{font-size:.75rem;font-weight:500;color:var(--text)}
-.testi-sub{font-size:.65rem;color:var(--muted)}
-.testi-stars{color:var(--accent);font-size:.7rem;margin-bottom:.8rem}
+/* TESTIMONIALS */
+.testimonials{padding:5rem 2rem;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.testi-grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:2.5rem}
+.testi{background:var(--bg);border:1px solid var(--border);padding:1.5rem}
+.testi-quote{font-size:.8rem;color:var(--muted2);line-height:1.75;margin-bottom:1.2rem;font-style:italic}
+.testi-author{display:flex;align-items:center;gap:.7rem}
+.testi-avatar{width:30px;height:30px;border-radius:50%;background:rgba(196,164,107,.15);border:1px solid rgba(196,164,107,.2);display:flex;align-items:center;justify-content:center;font-size:.6rem;font-weight:500;color:var(--accent);flex-shrink:0}
+.testi-name{font-size:.72rem;font-weight:500;color:var(--text)}
+.testi-sub{font-size:.62rem;color:var(--muted)}
+.testi-stars{color:var(--accent);font-size:.65rem;margin-bottom:.7rem}
 
-/* ===================== FAQ ===================== */
-.faq-section{padding:6rem 3.5rem}
-.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-top:3rem}
-.faq-item{background:var(--bg);padding:2rem 2.2rem}
-.faq-q{font-size:.85rem;font-weight:500;color:var(--text);margin-bottom:.6rem}
-.faq-a{font-size:.78rem;color:var(--muted2);line-height:1.7}
+/* FAQ */
+.faq-section{padding:5rem 2rem}
+.faq-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--border);margin-top:2.5rem}
+.faq-item{background:var(--bg);padding:1.5rem}
+.faq-q{font-size:.82rem;font-weight:500;color:var(--text);margin-bottom:.5rem}
+.faq-a{font-size:.75rem;color:var(--muted2);line-height:1.7}
 
-/* ===================== PAYMENT ===================== */
-.pay-section{padding:6rem 3.5rem;border-top:1px solid var(--border)}
-.pay-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;max-width:1000px}
-.pay-left h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1.1;margin-bottom:1.5rem}
-.price-block{display:flex;align-items:baseline;gap:.5rem;margin-bottom:.7rem}
-.price-eur{font-family:'Playfair Display',serif;font-size:4rem;font-weight:900;color:var(--accent);line-height:1}
-.price-currency{font-size:1.8rem;color:var(--muted);font-weight:300}
-.price-usdt{display:inline-flex;align-items:center;gap:.5rem;background:rgba(196,164,107,.08);border:1px solid rgba(196,164,107,.2);padding:.35rem .9rem;font-size:.75rem;color:var(--accent);font-weight:500;letter-spacing:.08em;margin-bottom:2rem}
-.included-list{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-bottom:2rem}
-.included-list li{display:flex;align-items:flex-start;gap:.7rem;font-size:.8rem;color:var(--muted2);line-height:1.5}
-.included-list li::before{content:'✓';color:var(--accent);flex-shrink:0;font-size:.75rem;margin-top:2px}
+/* PAYMENT */
+.pay-section{padding:5rem 2rem;border-top:1px solid var(--border)}
+.pay-grid{display:flex;flex-direction:column;gap:3rem}
+.pay-left h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,6vw,3rem);font-weight:700;line-height:1.1;margin-bottom:1.2rem}
+.price-block{display:flex;align-items:baseline;gap:.4rem;margin-bottom:.6rem}
+.price-eur{font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:900;color:var(--accent);line-height:1}
+.price-currency{font-size:1.5rem;color:var(--muted);font-weight:300}
+.price-usdt{display:inline-flex;align-items:center;gap:.4rem;background:rgba(196,164,107,.08);border:1px solid rgba(196,164,107,.2);padding:.3rem .8rem;font-size:.72rem;color:var(--accent);font-weight:500;letter-spacing:.07em;margin-bottom:1.8rem}
+.included-list{list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.8rem}
+.included-list li{display:flex;align-items:flex-start;gap:.6rem;font-size:.78rem;color:var(--muted2);line-height:1.5}
+.included-list li::before{content:'✓';color:var(--accent);flex-shrink:0;font-size:.7rem;margin-top:2px}
 .included-list li strong{color:var(--text);font-weight:500}
-.steps{display:flex;flex-direction:column;gap:1rem;margin-top:.5rem}
-.step{display:flex;gap:1rem;align-items:flex-start}
-.step-num{width:24px;height:24px;border:1px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:.65rem;color:var(--accent);flex-shrink:0;font-weight:500}
-.step-body{font-size:.78rem;color:var(--muted2);line-height:1.65;padding-top:3px}
+.steps{display:flex;flex-direction:column;gap:.9rem;margin-top:.5rem}
+.step{display:flex;gap:.9rem;align-items:flex-start}
+.step-num{width:22px;height:22px;border:1px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:.6rem;color:var(--accent);flex-shrink:0;font-weight:500}
+.step-body{font-size:.75rem;color:var(--muted2);line-height:1.65;padding-top:2px}
 .step-body strong{color:var(--text);font-weight:500}
-.pay-card{background:var(--surface);border:1px solid var(--border)}
-.pay-card-header{padding:1rem 1.5rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
-.pay-card-header span{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
-.net-badge{display:flex;align-items:center;gap:.4rem;font-size:.65rem;font-weight:500;color:#4ade80;letter-spacing:.08em;text-transform:uppercase}
-.net-dot{width:6px;height:6px;border-radius:50%;background:#4ade80;animation:pulse 2s ease infinite}
-.pay-card-body{padding:1.5rem}
-.qr-box{width:110px;height:110px;background:var(--surface2);border:1px solid var(--border);margin:0 auto 1.5rem;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.qr-box::before{content:'';position:absolute;inset:6px;background-image:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(196,164,107,.12) 3px,rgba(196,164,107,.12) 4px),repeating-linear-gradient(90deg,transparent,transparent 3px,rgba(196,164,107,.12) 3px,rgba(196,164,107,.12) 4px)}
-.qr-label{font-size:.55rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;text-align:center;position:relative;z-index:1}
-.addr-label{font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem}
-.addr-box{background:var(--bg);border:1px solid var(--border);padding:.7rem .9rem;font-family:monospace;font-size:.62rem;color:var(--accent2);word-break:break-all;line-height:1.5;cursor:pointer;transition:border-color .2s;margin-bottom:.3rem}
-.addr-box:hover{border-color:var(--accent)}
-.addr-hint{font-size:.6rem;color:var(--muted);text-align:center;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.2rem}
-.amount-row{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border);padding-top:1rem;margin-top:1rem}
-.amount-lbl{font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
-.amount-val{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--accent)}
-.amount-ticker{font-size:.65rem;color:var(--muted)}
-.btn-confirm{width:100%;background:transparent;border:1px solid var(--accent);color:var(--accent);font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:.9rem;cursor:pointer;margin-top:1.2rem;transition:all .3s}
-.btn-confirm:hover{background:var(--accent);color:var(--bg)}
 
-/* ===================== GUARANTEE + FOOTER ===================== */
-.guarantee{padding:4rem 3.5rem;display:flex;gap:3rem;align-items:center;border-top:1px solid var(--border)}
-.g-icon{font-size:2.5rem;flex-shrink:0;opacity:.6}
-.g-body h3{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;margin-bottom:.5rem}
-.g-body p{font-size:.8rem;color:var(--muted2);line-height:1.8;max-width:540px}
-footer{padding:2.5rem 3.5rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
-.footer-logo{font-family:'Playfair Display',serif;font-size:.85rem;letter-spacing:.18em;color:var(--accent);text-transform:uppercase}
-.footer-right{display:flex;gap:2rem}
-.footer-right a{font-size:.65rem;color:var(--muted);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
+/* PAYMENT CARD */
+.pay-card{background:var(--surface);border:1px solid var(--border)}
+.pay-card-header{padding:.9rem 1.2rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.pay-card-header span{font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+.net-badge{display:flex;align-items:center;gap:.35rem;font-size:.6rem;font-weight:500;color:#4ade80;letter-spacing:.07em;text-transform:uppercase}
+.net-dot{width:5px;height:5px;border-radius:50%;background:#4ade80;animation:pulse 2s ease infinite}
+.pay-card-body{padding:1.2rem}
+.qr-box{width:100px;height:100px;background:var(--surface2);border:1px solid var(--border);margin:0 auto 1.2rem;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.qr-box::before{content:'';position:absolute;inset:5px;background-image:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(196,164,107,.12) 3px,rgba(196,164,107,.12) 4px),repeating-linear-gradient(90deg,transparent,transparent 3px,rgba(196,164,107,.12) 3px,rgba(196,164,107,.12) 4px)}
+.qr-label{font-size:.5rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;text-align:center;position:relative;z-index:1}
+.addr-label{font-size:.58rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:.35rem}
+.addr-box{background:var(--bg);border:1px solid var(--border);padding:.6rem .8rem;font-family:monospace;font-size:.6rem;color:var(--accent2);word-break:break-all;line-height:1.5;cursor:pointer;transition:border-color .2s;margin-bottom:.3rem}
+.addr-box:hover{border-color:var(--accent)}
+.addr-hint{font-size:.58rem;color:var(--muted);text-align:center;letter-spacing:.08em;text-transform:uppercase;margin-bottom:1rem}
+.amount-row{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border);padding-top:.9rem;margin-top:.9rem}
+.amount-lbl{font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.amount-val{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--accent)}
+.amount-ticker{font-size:.6rem;color:var(--muted)}
+.btn-confirm{width:100%;background:transparent;border:1px solid var(--accent);color:var(--accent);font-family:'DM Sans',sans-serif;font-size:.68rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:.85rem;cursor:pointer;margin-top:1rem;transition:all .3s}
+.btn-confirm:hover{background:var(--accent);color:var(--bg)}
+.warn-box{font-size:.68rem;color:#f87171;background:rgba(248,113,113,.07);border:1px solid rgba(248,113,113,.2);padding:.55rem .8rem;margin-bottom:.5rem;line-height:1.5}
+
+/* GUARANTEE */
+.guarantee{padding:3.5rem 2rem;display:flex;flex-direction:column;gap:1.5rem;border-top:1px solid var(--border)}
+.g-icon{font-size:2rem;opacity:.6}
+.g-body h3{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-bottom:.5rem}
+.g-body p{font-size:.78rem;color:var(--muted2);line-height:1.8}
+
+/* FOOTER */
+footer{padding:2rem;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:1rem;align-items:center;text-align:center}
+.footer-logo{font-family:'Playfair Display',serif;font-size:.82rem;letter-spacing:.15em;color:var(--accent);text-transform:uppercase}
+.footer-right{display:flex;flex-wrap:wrap;justify-content:center;gap:1.2rem}
+.footer-right a{font-size:.62rem;color:var(--muted);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
 .footer-right a:hover{color:var(--text)}
 
-/* ===================== TOAST ===================== */
-.toast{position:fixed;bottom:2rem;right:2rem;background:var(--accent);color:var(--bg);padding:.7rem 1.4rem;font-size:.7rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;z-index:200;opacity:0;transform:translateY(.8rem);transition:all .3s;pointer-events:none}
+/* TOAST */
+.toast{position:fixed;bottom:1.5rem;right:1.5rem;background:var(--accent);color:var(--bg);padding:.6rem 1.2rem;font-size:.65rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;z-index:200;opacity:0;transform:translateY(.8rem);transition:all .3s;pointer-events:none}
 .toast.show{opacity:1;transform:translateY(0)}
+
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* DESKTOP OVERRIDES */
+@media(min-width:768px){
+  nav{padding:1.2rem 3.5rem}
+  .logo{font-size:1rem}
+  .nav-links a{font-size:.7rem;gap:2.5rem}
+  .nav-cta{font-size:.7rem;padding:.5rem 1.4rem}
+
+  .hero{padding:9rem 3.5rem 5rem}
+  .hero-actions{flex-wrap:nowrap}
+
+  .stats{grid-template-columns:repeat(4,1fr)}
+  .stat{padding:2rem 2.5rem;text-align:left}
+  .stat-num{font-size:2.5rem}
+
+  .section{padding:6rem 3.5rem}
+  .divider{margin:0 3.5rem}
+
+  .modules-intro{flex-direction:row;gap:4rem;align-items:start}
+  .modules-intro > div:first-child{flex:1}
+  .highlight-boxes{flex:1}
+
+  .modules-grid{grid-template-columns:repeat(2,1fr)}
+
+  .tr-section{padding:6rem 3.5rem}
+  .tr-grid{flex-direction:row;gap:5rem;align-items:center}
+  .tr-grid > div:first-child{flex:1}
+  .tr-preview{flex:1.2}
+
+  .for-grid{grid-template-columns:repeat(3,1fr)}
+
+  .testimonials{padding:6rem 3.5rem}
+  .testi-grid{grid-template-columns:repeat(3,1fr)}
+
+  .faq-section{padding:6rem 3.5rem}
+  .faq-grid{grid-template-columns:repeat(2,1fr)}
+
+  .pay-section{padding:6rem 3.5rem}
+  .pay-grid{flex-direction:row;gap:5rem;align-items:start;max-width:1000px}
+  .pay-left{flex:1}
+  .pay-card-wrap{flex:1}
+
+  .guarantee{flex-direction:row;padding:4rem 3.5rem;gap:3rem}
+  footer{flex-direction:row;justify-content:space-between;padding:2.5rem 3.5rem;text-align:left}
+  .footer-right{flex-wrap:nowrap}
+}
 </style>
 </head>
 <body>
 
-<!-- ================================================
-     NAVIGATION
-     ================================================ -->
+<!-- NAV -->
 <nav>
   <div class="logo">Cryptomega</div>
   <div class="nav-links">
-    <a href="#formation">Formation</a>
+    <a href="#formation" class="nav-hide-sm">Formation</a>
     <a href="#track-record">Track Record</a>
     <a href="#faq">FAQ</a>
     <a href="#paiement" class="nav-cta">Accéder →</a>
   </div>
 </nav>
 
-<!-- ================================================
-     HERO
-     ================================================ -->
+<!-- HERO -->
 <section class="hero">
   <div class="tag">Formation trading crypto — 2025</div>
   <h1>Deviens le trader<br>que tu <em>aurais voulu</em><br>rencontrer.</h1>
@@ -214,25 +265,21 @@ footer{padding:2.5rem 3.5rem;border-top:1px solid var(--border);display:flex;jus
   </div>
 </section>
 
-<!-- ================================================
-     STATS BAR
-     ================================================ -->
+<!-- STATS -->
 <div class="stats">
   <div class="stat"><div class="stat-num">12</div><div class="stat-label">Modules vidéo</div></div>
   <div class="stat"><div class="stat-num">+9 ans</div><div class="stat-label">D'expérience</div></div>
   <div class="stat"><div class="stat-num">∞</div><div class="stat-label">Accès à vie</div></div>
-  <div class="stat"><div class="stat-num">1</div><div class="stat-label">Track Record outil inclus</div></div>
+  <div class="stat"><div class="stat-num">1</div><div class="stat-label">Track Record inclus</div></div>
 </div>
 
-<!-- ================================================
-     VIDEO
-     ================================================ -->
+<!-- VIDEO -->
 <section class="section" id="video">
   <div class="s-tag">Présentation</div>
   <h2 class="s-title">Ce que tu vas apprendre</h2>
-  <p class="s-subtitle">Regarde la vidéo de présentation avant de prendre ta décision. La transparence, c'est notre marque de fabrique.</p>
-  <!-- MODIF : Remplace l'URL YouTube ci-dessous quand ta vidéo est prête -->
-  <!-- <iframe width="860" height="484" src="https://www.youtube.com/embed/TON_VIDEO_ID" frameborder="0" allowfullscreen></iframe> -->
+  <p class="s-subtitle">Regarde la vidéo de présentation avant de prendre ta décision.</p>
+  <!-- MODIF : remplace le bloc ci-dessous par ton iframe YouTube quand tu as la vidéo -->
+  <!-- <iframe width="100%" style="aspect-ratio:16/9" src="https://www.youtube.com/embed/TON_VIDEO_ID" frameborder="0" allowfullscreen></iframe> -->
   <div class="video-wrap">
     <div class="play-ring">▶</div>
     <div class="vid-badge">Vidéo de présentation — Disponible prochainement</div>
@@ -241,9 +288,7 @@ footer{padding:2.5rem 3.5rem;border-top:1px solid var(--border);display:flex;jus
 
 <div class="divider"></div>
 
-<!-- ================================================
-     MODULES
-     ================================================ -->
+<!-- MODULES -->
 <section class="section" id="formation">
   <div class="modules-intro">
     <div>
@@ -251,10 +296,10 @@ footer{padding:2.5rem 3.5rem;border-top:1px solid var(--border);display:flex;jus
       <h2 class="s-title">12 modules.<br>Zéro remplissage.</h2>
       <p class="s-subtitle">Chaque module est scripté mot pour mot. Pas de blabla, pas de théorie inutile. Uniquement ce qui fonctionne sur les marchés réels en 2025.</p>
     </div>
-    <div class="modules-intro-right">
+    <div class="highlight-boxes">
       <div class="highlight-box"><strong>Vidéos HD + supports PDF</strong><span>Chaque module inclut sa vidéo, ses slides annotés et ses exemples de trades réels.</span></div>
       <div class="highlight-box"><strong>Exemples BTC en temps réel</strong><span>Tous les concepts sont illustrés sur des charts BTC Binance avec des situations récentes.</span></div>
-      <div class="highlight-box"><strong>Mises à jour incluses à vie</strong><span>Tu paies une fois. Les ajouts futurs (nouveaux modules, stratégies) sont offerts.</span></div>
+      <div class="highlight-box"><strong>Mises à jour incluses à vie</strong><span>Tu paies une fois. Les ajouts futurs sont offerts.</span></div>
     </div>
   </div>
   <div class="modules-grid">
@@ -262,63 +307,61 @@ footer{padding:2.5rem 3.5rem;border-top:1px solid var(--border);display:flex;jus
     <div class="mod"><div class="mod-num">02</div><div class="mod-body"><h3>Lecture des chandeliers & Price Action</h3><p>Les patterns qui comptent vraiment, ceux qui ne servent à rien, et comment lire un graphique en moins de 30 secondes comme un pro.</p><div class="mod-tags"><span class="mod-tag">price action</span><span class="mod-tag">lecture chart</span></div></div></div>
     <div class="mod"><div class="mod-num">03</div><div class="mod-body"><h3>Structure de marché SMC</h3><p>Break of Structure, Change of Character, Premium & Discount — apprendre à lire le marché comme les institutions. Le module le plus important de la formation.</p><div class="mod-tags"><span class="mod-tag">SMC</span><span class="mod-tag">ICT</span><span class="mod-tag">structure</span></div></div></div>
     <div class="mod"><div class="mod-num">04</div><div class="mod-body"><h3>Fair Value Gaps & Order Blocks</h3><p>Identifier les déséquilibres de marché et les zones d'accumulation institutionnelle. Ces zones où le prix revient systématiquement chercher de la liquidité.</p><div class="mod-tags"><span class="mod-tag">FVG</span><span class="mod-tag">OB</span><span class="mod-tag">IFVG</span></div></div></div>
-    <div class="mod"><div class="mod-num">05</div><div class="mod-body"><h3>La liquidité — comprendre le vrai moteur</h3><p>Equal highs/lows, BSL/SSL, chasses aux stops. Comprendre où le prix va chercher de la liquidité avant de se retourner. Le concept qui change tout.</p><div class="mod-tags"><span class="mod-tag">liquidité</span><span class="mod-tag">stop hunt</span></div></div></div>
+    <div class="mod"><div class="mod-num">05</div><div class="mod-body"><h3>La liquidité — comprendre le vrai moteur</h3><p>Equal highs/lows, BSL/SSL, chasses aux stops. Comprendre où le prix va chercher de la liquidité avant de se retourner.</p><div class="mod-tags"><span class="mod-tag">liquidité</span><span class="mod-tag">stop hunt</span></div></div></div>
     <div class="mod"><div class="mod-num">06</div><div class="mod-body"><h3>Analyse multi-timeframe (MTF)</h3><p>Aligner le HTF pour le contexte, le MTF pour la structure, le LTF pour l'entrée précise. La méthode pour ne plus trader contre la tendance sans le savoir.</p><div class="mod-tags"><span class="mod-tag">HTF</span><span class="mod-tag">LTF</span><span class="mod-tag">confluence</span></div></div></div>
-    <div class="mod"><div class="mod-num">07</div><div class="mod-body"><h3>Risk Management & Position Sizing</h3><p>Combien risquer par trade, comment calculer sa taille de position, gérer le drawdown sans exploser son compte. Le module qui sauve des comptes entiers.</p><div class="mod-tags"><span class="mod-tag">risk</span><span class="mod-tag">R:R</span><span class="mod-tag">drawdown</span></div></div></div>
+    <div class="mod"><div class="mod-num">07</div><div class="mod-body"><h3>Risk Management & Position Sizing</h3><p>Combien risquer par trade, comment calculer sa taille de position, gérer le drawdown sans exploser son compte.</p><div class="mod-tags"><span class="mod-tag">risk</span><span class="mod-tag">R:R</span><span class="mod-tag">drawdown</span></div></div></div>
     <div class="mod"><div class="mod-num">08</div><div class="mod-body"><h3>Setups complets clé en main</h3><p>3 setups précis avec critères d'entrée, de stop loss, de target et d'invalidation. Reproductibles, backtestés, applicables dès demain sur BTC.</p><div class="mod-tags"><span class="mod-tag">setup</span><span class="mod-tag">entrée</span><span class="mod-tag">SL/TP</span></div></div></div>
     <div class="mod"><div class="mod-num">09</div><div class="mod-body"><h3>Psychologie du trader</h3><p>FOMO, revenge trading, biais de confirmation — identifier tes patterns destructeurs et construire la discipline qui sépare les traders rentables des autres.</p><div class="mod-tags"><span class="mod-tag">mindset</span><span class="mod-tag">discipline</span></div></div></div>
     <div class="mod"><div class="mod-num">10</div><div class="mod-body"><h3>Backtesting & validation de stratégie</h3><p>Comment tester tes setups sur données historiques, interpréter les résultats et valider statistiquement une edge avant de la trader en live.</p><div class="mod-tags"><span class="mod-tag">backtest</span><span class="mod-tag">statistiques</span></div></div></div>
     <div class="mod"><div class="mod-num">11</div><div class="mod-body"><h3>Trading futures & levier</h3><p>Mécanismes du perpetual, funding rate, liquidation — utiliser le levier intelligemment et éviter les pièges qui font exploser 95% des traders futures.</p><div class="mod-tags"><span class="mod-tag">futures</span><span class="mod-tag">perp</span><span class="mod-tag">levier</span></div></div></div>
-    <div class="mod"><div class="mod-num">12</div><div class="mod-body"><h3>Plan de trading & routine quotidienne</h3><p>Construire ton propre plan de trading personnalisé et ta routine journalière. Comment passer de "je regarde des charts" à un process de trader professionnel.</p><div class="mod-tags"><span class="mod-tag">plan</span><span class="mod-tag">routine</span></div></div></div>
+    <div class="mod"><div class="mod-num">12</div><div class="mod-body"><h3>Plan de trading & routine quotidienne</h3><p>Construire ton propre plan de trading personnalisé et ta routine journalière. Passer de "je regarde des charts" à un process de trader professionnel.</p><div class="mod-tags"><span class="mod-tag">plan</span><span class="mod-tag">routine</span></div></div></div>
   </div>
 </section>
 
-<!-- ================================================
-     TRACK RECORD
-     ================================================ -->
+<!-- TRACK RECORD -->
 <section class="tr-section" id="track-record">
   <div class="tr-grid">
     <div>
       <div class="s-tag">Bonus inclus</div>
       <h2 class="s-title">Ton Track Record<br>personnel offert.</h2>
-      <p class="s-subtitle" style="margin-bottom:2.5rem">Chaque membre reçoit l'outil de track record que j'utilise moi-même. Saisis tes trades, suis tes métriques clés et identifie tes patterns — pour progresser avec des données réelles, pas des impressions.</p>
+      <p class="s-subtitle">Chaque membre reçoit l'outil de track record que j'utilise moi-même. Saisis tes trades, suis tes métriques clés et identifie tes patterns — pour progresser avec des données réelles, pas des impressions.</p>
       <div class="tr-features">
-        <div class="tr-feat"><div class="tr-feat-icon">📊</div><div class="tr-feat-body"><h4>Métriques professionnelles</h4><p>Win rate, ratio R:R moyen, profit factor, drawdown max, performance par setup — tout ce qu'un prop trader regarde pour évaluer son edge.</p></div></div>
+        <div class="tr-feat"><div class="tr-feat-icon">📊</div><div class="tr-feat-body"><h4>Métriques professionnelles</h4><p>Win rate, R:R moyen, profit factor, drawdown max — tout ce qu'un prop trader regarde pour évaluer son edge.</p></div></div>
         <div class="tr-feat"><div class="tr-feat-icon">✏️</div><div class="tr-feat-body"><h4>Saisie simple et structurée</h4><p>Un format pensé pour aller vite. Tu remplis tes trades au fil de l'eau, l'outil calcule tout automatiquement.</p></div></div>
-        <div class="tr-feat"><div class="tr-feat-icon">🎯</div><div class="tr-feat-body"><h4>Identification des patterns</h4><p>Découvre tes meilleurs jours, tes pires heures, tes setups les plus rentables. L'outil que j'utilise moi-même pour améliorer mon trading.</p></div></div>
+        <div class="tr-feat"><div class="tr-feat-icon">🎯</div><div class="tr-feat-body"><h4>Identification des patterns</h4><p>Découvre tes meilleurs jours, tes pires heures, tes setups les plus rentables.</p></div></div>
       </div>
     </div>
     <div class="tr-preview">
       <div class="tr-header"><div class="tr-dot"></div><span class="tr-title-bar">CRYPTOMEGA — Track Record · BTC Futures</span></div>
-      <table class="tr-table">
-        <thead><tr><th>Date</th><th>Setup</th><th>R:R</th><th>Résultat</th></tr></thead>
-        <tbody>
-          <tr><td>12 Jan</td><td>FVG + OB HTF</td><td>1:3.2</td><td class="win">+3.2R</td></tr>
-          <tr><td>14 Jan</td><td>Liquidity Sweep</td><td>1:2.5</td><td class="win">+2.5R</td></tr>
-          <tr><td>15 Jan</td><td>BOS + Retracement</td><td>1:1.8</td><td class="loss">−1R</td></tr>
-          <tr><td>18 Jan</td><td>IFVG + Structure</td><td>1:4.0</td><td class="win">+4.0R</td></tr>
-          <tr><td>21 Jan</td><td>OTE Premium</td><td>1:2.2</td><td class="win">+2.2R</td></tr>
-          <tr><td>23 Jan</td><td>Equal Highs Sweep</td><td>1:3.0</td><td class="loss">−1R</td></tr>
-          <tr><td>25 Jan</td><td>FVG Discount</td><td>1:2.8</td><td class="win">+2.8R</td></tr>
-        </tbody>
-      </table>
-      <div class="tr-footer"><span>Win rate : <strong>71.4%</strong></span><span>Profit factor : <strong>8.7R</strong></span><span>Période : <strong>Jan 2025</strong></span></div>
+      <div class="tr-scroll">
+        <table class="tr-table">
+          <thead><tr><th>Date</th><th>Setup</th><th>R:R</th><th>Résultat</th></tr></thead>
+          <tbody>
+            <tr><td>12 Jan</td><td>FVG + OB HTF</td><td>1:3.2</td><td class="win">+3.2R</td></tr>
+            <tr><td>14 Jan</td><td>Liquidity Sweep</td><td>1:2.5</td><td class="win">+2.5R</td></tr>
+            <tr><td>15 Jan</td><td>BOS + Retracement</td><td>1:1.8</td><td class="loss">−1R</td></tr>
+            <tr><td>18 Jan</td><td>IFVG + Structure</td><td>1:4.0</td><td class="win">+4.0R</td></tr>
+            <tr><td>21 Jan</td><td>OTE Premium</td><td>1:2.2</td><td class="win">+2.2R</td></tr>
+            <tr><td>23 Jan</td><td>Equal Highs Sweep</td><td>1:3.0</td><td class="loss">−1R</td></tr>
+            <tr><td>25 Jan</td><td>FVG Discount</td><td>1:2.8</td><td class="win">+2.8R</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tr-footer"><span>Win rate : <strong>71.4%</strong></span><span>Profit factor : <strong>8.7R</strong></span><span>Jan 2025</span></div>
     </div>
   </div>
 </section>
 
-<!-- ================================================
-     POUR QUI
-     ================================================ -->
+<!-- POUR QUI -->
 <section class="section">
   <div class="s-tag">Pour qui ?</div>
   <h2 class="s-title">Cette formation est faite<br>pour toi si…</h2>
   <div class="for-grid">
     <div class="for-card"><div class="for-icon">🌱</div><h3>Tu es débutant</h3><p>Tu veux apprendre le trading sérieusement, pas copier des signaux. Tu cherches des bases solides pour ne pas répéter les erreurs des autres.</p></div>
     <div class="for-card"><div class="for-icon">📉</div><h3>Tu perds régulièrement</h3><p>Tu trades depuis plusieurs mois mais ton compte stagne ou recule. Tu as besoin d'une méthode claire et d'un regard extérieur sur tes erreurs.</p></div>
-    <div class="for-card"><div class="for-icon">🔄</div><h3>Tu veux passer au niveau supérieur</h3><p>Tu es rentable mais pas encore consistant. Tu veux structurer ton approche, professionnaliser ton process et trader avec conviction.</p></div>
+    <div class="for-card"><div class="for-icon">🔄</div><h3>Tu veux passer au niveau supérieur</h3><p>Tu es rentable mais pas encore consistant. Tu veux structurer ton approche et trader avec conviction.</p></div>
   </div>
-  <div style="margin-top:3rem">
+  <div style="margin-top:2.5rem">
     <div class="s-tag">Pas pour toi si…</div>
     <div class="notfor-list">
       <div class="notfor-item">Tu cherches des signaux ou quelqu'un qui trade à ta place</div>
@@ -331,62 +374,37 @@ footer{padding:2.5rem 3.5rem;border-top:1px solid var(--border);display:flex;jus
 
 <div class="divider"></div>
 
-<!-- ================================================
-     TÉMOIGNAGES — À remplacer par de vrais avis
-     ================================================ -->
+<!-- TÉMOIGNAGES -->
 <section class="testimonials">
   <div class="s-tag">Ils ont testé</div>
   <h2 class="s-title">Ce qu'ils en disent</h2>
   <div class="testi-grid">
     <div class="testi"><div class="testi-stars">★★★★★</div><p class="testi-quote">"Le module sur la liquidité m'a ouvert les yeux. Je comprenais pas pourquoi mon stop partait systématiquement avant le move. Maintenant je trade avec les institutionnels, pas contre eux."</p><div class="testi-author"><div class="testi-avatar">TK</div><div><div class="testi-name">Thomas K.</div><div class="testi-sub">Trader depuis 8 mois</div></div></div></div>
-    <div class="testi"><div class="testi-stars">★★★★★</div><p class="testi-quote">"J'avais essayé 3 formations avant celle-là. C'est la première fois que tout s'enchaîne logiquement. Le track record outil en bonus c'est un game changer, je vois enfin mes vrais stats."</p><div class="testi-author"><div class="testi-avatar">SL</div><div><div class="testi-name">Sara L.</div><div class="testi-sub">Passée de -40% à breakeven</div></div></div></div>
+    <div class="testi"><div class="testi-stars">★★★★★</div><p class="testi-quote">"J'avais essayé 3 formations avant celle-là. C'est la première fois que tout s'enchaîne logiquement. Le track record outil en bonus c'est un game changer."</p><div class="testi-author"><div class="testi-avatar">SL</div><div><div class="testi-name">Sara L.</div><div class="testi-sub">Passée de -40% à breakeven</div></div></div></div>
     <div class="testi"><div class="testi-stars">★★★★★</div><p class="testi-quote">"Le contenu est dense et direct — exactement ce que je cherchais. Pas de bullshit, pas de padding. Module 8 sur les setups clé en main vaut à lui seul le prix de la formation."</p><div class="testi-author"><div class="testi-avatar">MA</div><div><div class="testi-name">Mehdi A.</div><div class="testi-sub">Trader crypto depuis 2022</div></div></div></div>
   </div>
 </section>
 
-<!-- ================================================
-     FAQ
-     ================================================ -->
+<!-- FAQ -->
 <section class="faq-section" id="faq">
   <div class="s-tag">Questions fréquentes</div>
   <h2 class="s-title">Ce que tu te demandes<br>sûrement</h2>
   <div class="faq-grid">
-    <div class="faq-item">
-      <div class="faq-q">Comment je reçois mon accès après le paiement ?</div>
-      <div class="faq-a">Envoie la capture de ta transaction confirmée par mail à <strong style="color:var(--accent)">contact.cryptomega@gmail.com</strong>. L'accès est envoyé manuellement sous 24h maximum, souvent bien plus vite.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Pourquoi payer en crypto uniquement ?</div>
-      <div class="faq-a">Le paiement en USDT TRC20 est décentralisé, rapide, sans intermédiaire et sans frais bancaires inutiles. C'est cohérent avec l'univers dans lequel on trade.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Est-ce que la formation est adaptée aux débutants ?</div>
-      <div class="faq-a">Oui, entièrement. Le Module 1 repart de zéro. Chaque concept est introduit progressivement, avec des exemples concrets avant d'aborder les sujets avancés.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Le track record outil, c'est quoi exactement ?</div>
-      <div class="faq-a">C'est un fichier Excel/Google Sheets dans lequel tu saisis tes trades. Il calcule automatiquement toutes tes métriques : win rate, R:R moyen, profit factor, drawdown. Inclus gratuitement.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Y a-t-il un suivi après l'achat ?</div>
-      <div class="faq-a">Tu peux me contacter directement par mail ou via Twitter pour toute question sur le contenu. Je réponds personnellement.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Est-ce que je peux me faire rembourser ?</div>
-      <div class="faq-a">La nature du paiement crypto et de l'accès immédiat au contenu ne permettent pas de remboursement automatique. En cas de litige sérieux, la situation est étudiée au cas par cas.</div>
-    </div>
+    <div class="faq-item"><div class="faq-q">Comment je reçois mon accès après le paiement ?</div><div class="faq-a">Envoie la capture de ta transaction confirmée par mail à <strong style="color:var(--accent)">contact.cryptomega@gmail.com</strong>. L'accès est envoyé manuellement sous 24h maximum, souvent bien plus vite.</div></div>
+    <div class="faq-item"><div class="faq-q">Pourquoi payer en crypto uniquement ?</div><div class="faq-a">Le paiement en USDT TRC20 est décentralisé, rapide, sans intermédiaire et sans frais bancaires. C'est cohérent avec l'univers dans lequel on trade.</div></div>
+    <div class="faq-item"><div class="faq-q">Est-ce que la formation est adaptée aux débutants ?</div><div class="faq-a">Oui, entièrement. Le Module 1 repart de zéro. Chaque concept est introduit progressivement avec des exemples concrets avant d'aborder les sujets avancés.</div></div>
+    <div class="faq-item"><div class="faq-q">Le track record outil, c'est quoi exactement ?</div><div class="faq-a">C'est un fichier Excel/Google Sheets dans lequel tu saisis tes trades. Il calcule automatiquement toutes tes métriques : win rate, R:R moyen, profit factor, drawdown. Inclus gratuitement.</div></div>
+    <div class="faq-item"><div class="faq-q">Y a-t-il un suivi après l'achat ?</div><div class="faq-a">Tu peux me contacter directement par mail ou via Twitter pour toute question sur le contenu. Je réponds personnellement.</div></div>
+    <div class="faq-item"><div class="faq-q">Est-ce que je peux me faire rembourser ?</div><div class="faq-a">La nature du paiement crypto et de l'accès immédiat au contenu ne permettent pas de remboursement automatique. En cas de litige sérieux, la situation est étudiée au cas par cas.</div></div>
   </div>
 </section>
 
-<!-- ================================================
-     PAIEMENT
-     MODIF OBLIGATOIRE : remplace l'adresse TRC20
-     ================================================ -->
+<!-- PAIEMENT -->
 <section class="pay-section" id="paiement">
   <div class="s-tag">Accès à la formation</div>
   <div class="pay-grid">
     <div class="pay-left">
-      <h2>Tout ce qu'il te faut<br>pour <em style="font-style:italic;color:var(--accent)">vraiment progresser.</em></h2>
+      <h2>Tout ce qu'il te faut pour <em style="font-style:italic;color:var(--accent)">vraiment progresser.</em></h2>
       <div class="price-block"><span class="price-eur">497</span><span class="price-currency">€</span></div>
       <div class="price-usdt">⬡ Paiement · 574 USDT · TRC20 uniquement</div>
       <ul class="included-list">
@@ -396,30 +414,29 @@ footer{padding:2.5rem 3.5rem;border-top:1px solid var(--border);display:flex;jus
         <li><strong>Exemples de trades réels</strong> — BTC Perpetual Futures</li>
         <li><strong>Support direct</strong> — contact personnel par mail ou Twitter</li>
       </ul>
-      <div class="s-tag" style="margin-bottom:1rem">Comment procéder</div>
+      <div class="s-tag" style="margin-bottom:.8rem">Comment procéder</div>
       <div class="steps">
-        <div class="step"><div class="step-num">1</div><div class="step-body">Copie l'adresse USDT TRC20 ci-contre et envoie exactement <strong>574 USDT</strong> depuis ton wallet.</div></div>
-        <div class="step"><div class="step-num">2</div><div class="step-body">Prends une <strong>capture d'écran de la transaction</strong> confirmée avec le hash de transaction.</div></div>
+        <div class="step"><div class="step-num">1</div><div class="step-body">Copie l'adresse USDT TRC20 ci-dessous et envoie exactement <strong>574 USDT</strong>.</div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-body">Prends une <strong>capture de la transaction</strong> confirmée avec le hash.</div></div>
         <div class="step"><div class="step-num">3</div><div class="step-body">Envoie-la par mail à <strong>contact.cryptomega@gmail.com</strong></div></div>
-        <div class="step"><div class="step-num">4</div><div class="step-body">Reçois ton accès complet sous <strong>24h maximum</strong> (souvent en quelques heures).</div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-body">Reçois ton accès sous <strong>24h maximum</strong> (souvent en quelques heures).</div></div>
       </div>
     </div>
-    <div>
+    <div class="pay-card-wrap">
       <div class="pay-card">
         <div class="pay-card-header">
           <span>Paiement crypto</span>
           <div class="net-badge"><div class="net-dot"></div>USDT TRC20</div>
         </div>
         <div class="pay-card-body">
-          <!-- MODIF : Remplace le src du QR code quand tu l'as généré -->
-          <!-- <img src="qrcode.png" width="110" style="display:block;margin:0 auto 1.5rem"> -->
+          <!-- MODIF : remplace par <img src="qrcode.png"> quand tu as le QR -->
           <div class="qr-box"><span class="qr-label">QR Code<br>à venir</span></div>
           <div class="addr-label">Adresse de paiement USDT TRC20</div>
           <!-- MODIF OBLIGATOIRE : remplace cette adresse par la tienne -->
           <div class="addr-box" id="address" onclick="copyAddr()">TXXX_REMPLACE_PAR_TON_ADRESSE_TRC20</div>
           <div class="addr-hint">↑ Cliquer pour copier</div>
           <div class="addr-label">Réseau obligatoire</div>
-          <div style="font-size:.72rem;color:#f87171;background:rgba(248,113,113,.07);border:1px solid rgba(248,113,113,.2);padding:.6rem .9rem;margin-bottom:.5rem">⚠ Utilise uniquement le réseau TRC20 (Tron). Un envoi sur le mauvais réseau est irrécupérable.</div>
+          <div class="warn-box">⚠ Utilise uniquement le réseau TRC20 (Tron). Un envoi sur le mauvais réseau est irrécupérable.</div>
           <div class="amount-row">
             <div><div class="amount-lbl">Montant exact</div><div class="amount-ticker">USDT · Tron TRC20</div></div>
             <div style="text-align:right"><div class="amount-val">574</div></div>
@@ -431,20 +448,16 @@ footer{padding:2.5rem 3.5rem;border-top:1px solid var(--border);display:flex;jus
   </div>
 </section>
 
-<!-- ================================================
-     GARANTIE
-     ================================================ -->
+<!-- GARANTIE -->
 <div class="guarantee">
   <div class="g-icon">◈</div>
   <div class="g-body">
     <h3>Formation orientée résultats — pas de bullshit.</h3>
-    <p>Chaque module est construit autour d'un seul objectif : que tu sois capable d'appliquer ce que tu viens d'apprendre dès la fin de la vidéo. Pas de contenu de remplissage, pas de vente de rêve. Du contenu concret, des exemples réels, une méthode qui se prouve par les chiffres.</p>
+    <p>Chaque module est construit autour d'un seul objectif : que tu sois capable d'appliquer ce que tu viens d'apprendre dès la fin de la vidéo. Du contenu concret, des exemples réels, une méthode qui se prouve par les chiffres.</p>
   </div>
 </div>
 
-<!-- ================================================
-     FOOTER
-     ================================================ -->
+<!-- FOOTER -->
 <footer>
   <div class="footer-logo">Cryptomega</div>
   <div class="footer-right">
@@ -467,6 +480,9 @@ function copyAddr() {
     setTimeout(() => el.classList.remove('show'), 2500);
   });
 }
+</script>
+</body>
+</html>
 </script>
 </body>
 </html>
