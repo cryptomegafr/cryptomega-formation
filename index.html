@@ -55,7 +55,6 @@ h1 em{font-style:italic;color:var(--accent)}
 .s-subtitle{font-size:0.97rem;color:var(--muted2);line-height:1.75;margin-bottom:2.5rem}
 .divider{height:1px;background:var(--border);margin:0 2rem}
 
-/* MODULE 0 */
 .module0-section{padding:5rem 2rem;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .module0-inner{max-width:860px}
 .module0-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(196,164,107,.1);border:1px solid rgba(196,164,107,.3);padding:.3rem .9rem;font-size:0.77rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem}
@@ -67,12 +66,6 @@ h1 em{font-style:italic;color:var(--accent)}
 .module0-cta{margin-top:1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem}
 .module0-cta-text{font-size:0.9rem;color:var(--muted2)}
 .module0-cta-text strong{color:var(--text);font-weight:500}
-
-.video-wrap{position:relative;aspect-ratio:16/9;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;overflow:hidden;width:100%}
-.video-wrap::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(196,164,107,.04) 0%,transparent 60%)}
-.play-ring{width:60px;height:60px;border:1.5px solid var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:1.2rem;transition:all .3s;position:relative;z-index:1}
-.video-wrap:hover .play-ring{background:var(--accent);color:var(--bg);transform:scale(1.1)}
-.vid-badge{position:absolute;top:1rem;left:1rem;font-size:0.67rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:rgba(10,10,10,.8);padding:.3rem .6rem;border:1px solid var(--border)}
 
 .modules-intro{display:flex;flex-direction:column;gap:1.5rem;margin-bottom:2.5rem}
 .highlight-boxes{display:flex;flex-direction:column;gap:.8rem}
@@ -120,16 +113,6 @@ h1 em{font-style:italic;color:var(--accent)}
 .notfor-item{display:flex;align-items:flex-start;gap:.7rem;font-size:0.9rem;color:var(--muted2);line-height:1.6}
 .notfor-item::before{content:'×';color:#f87171;flex-shrink:0;font-size:0.97rem;margin-top:1px}
 
-.testimonials{padding:5rem 2rem;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.testi-grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:2.5rem}
-.testi{background:var(--bg);border:1px solid var(--border);padding:1.5rem}
-.testi-quote{font-size:0.92rem;color:var(--muted2);line-height:1.75;margin-bottom:1.2rem;font-style:italic}
-.testi-author{display:flex;align-items:center;gap:.7rem}
-.testi-avatar{width:30px;height:30px;border-radius:50%;background:rgba(196,164,107,.15);border:1px solid rgba(196,164,107,.2);display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:500;color:var(--accent);flex-shrink:0}
-.testi-name{font-size:0.84rem;font-weight:500;color:var(--text)}
-.testi-sub{font-size:0.74rem;color:var(--muted)}
-.testi-stars{color:var(--accent);font-size:0.77rem;margin-bottom:.7rem}
-
 .faq-section{padding:5rem 2rem}
 .faq-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--border);margin-top:2.5rem}
 .faq-item{background:var(--bg);padding:1.5rem}
@@ -159,9 +142,6 @@ h1 em{font-style:italic;color:var(--accent)}
 .net-badge{display:flex;align-items:center;gap:.35rem;font-size:0.72rem;font-weight:500;color:#4ade80;letter-spacing:.07em;text-transform:uppercase}
 .net-dot{width:5px;height:5px;border-radius:50%;background:#4ade80;animation:pulse 2s ease infinite}
 .pay-card-body{padding:1.2rem}
-.qr-box{width:100px;height:100px;background:var(--surface2);border:1px solid var(--border);margin:0 auto 1.2rem;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.qr-box::before{content:'';position:absolute;inset:5px;background-image:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(196,164,107,.12) 3px,rgba(196,164,107,.12) 4px),repeating-linear-gradient(90deg,transparent,transparent 3px,rgba(196,164,107,.12) 3px,rgba(196,164,107,.12) 4px)}
-.qr-label{font-size:0.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;text-align:center;position:relative;z-index:1}
 .addr-label{font-size:0.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:.35rem}
 .addr-box{background:var(--bg);border:1px solid var(--border);padding:.6rem .8rem;font-family:monospace;font-size:0.72rem;color:var(--accent2);word-break:break-all;line-height:1.5;cursor:pointer;transition:border-color .2s;margin-bottom:.3rem}
 .addr-box:hover{border-color:var(--accent)}
@@ -208,8 +188,6 @@ footer{padding:2rem;border-top:1px solid var(--border);display:flex;flex-directi
   .tr-grid > div:first-child{flex:1}
   .tr-preview{flex:1.2}
   .for-grid{grid-template-columns:repeat(3,1fr)}
-  .testimonials{padding:6rem 3.5rem}
-  .testi-grid{grid-template-columns:repeat(3,1fr)}
   .faq-section{padding:6rem 3.5rem}
   .faq-grid{grid-template-columns:repeat(2,1fr)}
   .pay-section{padding:6rem 3.5rem}
@@ -221,48 +199,34 @@ footer{padding:2rem;border-top:1px solid var(--border);display:flex;flex-directi
   .footer-right{flex-wrap:nowrap}
 }
 
-/* ===================== ANIMATIONS HERO ===================== */
-.hero-tag, h1, .hero-sub, .hero-for, .hero-actions {
+/* ANIMATIONS HERO */
+.tag, h1, .hero-sub, .hero-for, .hero-actions {
   opacity: 0;
   transform: translateY(30px);
 }
-
-.hero-tag { animation: fadeUp 0.8s ease 0.2s forwards; }
+.tag { animation: fadeUp 0.8s ease 0.2s forwards; }
 h1 { animation: fadeUp 1s ease 0.5s forwards; }
 .hero-sub { animation: fadeUp 0.8s ease 0.9s forwards; }
 .hero-for { animation: fadeUp 0.8s ease 1.1s forwards; }
 .hero-actions { animation: fadeUp 0.8s ease 1.3s forwards; }
-
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
-/* Particles canvas */
 #particles-canvas {
-  position: fixed;
-  top: 0; left: 0;
+  position: fixed; top: 0; left: 0;
   width: 100%; height: 100%;
-  pointer-events: none;
-  z-index: 0;
+  pointer-events: none; z-index: 0;
 }
-
 .hero { position: relative; z-index: 1; }
-
-/* Cursor glow */
 .cursor-glow {
-  position: fixed;
-  width: 400px;
-  height: 400px;
+  position: fixed; width: 400px; height: 400px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(196,164,107,0.06) 0%, transparent 70%);
-  pointer-events: none;
-  z-index: 0;
+  pointer-events: none; z-index: 0;
   transform: translate(-50%, -50%);
   transition: left 0.15s ease, top 0.15s ease;
 }
-
-/* Shimmer on title */
 h1 em {
   background: linear-gradient(90deg, #c4a46b, #e8d5a3, #c4a46b, #a07840);
   background-size: 300% auto;
@@ -271,34 +235,19 @@ h1 em {
   background-clip: text;
   animation: shimmer 4s linear infinite 1.5s;
 }
-
 @keyframes shimmer {
   0% { background-position: 0% center; }
   100% { background-position: 300% center; }
 }
-
-/* Scroll indicator */
 .scroll-indicator {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
+  position: absolute; bottom: 2rem; left: 50%;
   transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.4rem;
-  opacity: 0;
-  animation: fadeUp 0.8s ease 1.8s forwards;
+  display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
+  opacity: 0; animation: fadeUp 0.8s ease 1.8s forwards;
 }
-.scroll-indicator span {
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
+.scroll-indicator span { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
 .scroll-line {
-  width: 1px;
-  height: 40px;
+  width: 1px; height: 40px;
   background: linear-gradient(to bottom, var(--accent), transparent);
   animation: scrollAnim 1.5s ease infinite 2s;
 }
@@ -308,10 +257,21 @@ h1 em {
   51% { transform: scaleY(1); transform-origin: bottom; }
   100% { transform: scaleY(0); transform-origin: bottom; }
 }
+.stat-num { transition: all 0.3s ease; }
 
-/* Stats counter animation */
-.stat-num {
-  transition: all 0.3s ease;
+/* ===================== FLOATING CRYPTO LOGOS ===================== */
+.crypto-float {
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  animation: floatCrypto linear infinite;
+}
+@keyframes floatCrypto {
+  0%   { transform: translateY(110vh) rotate(0deg);   opacity: 0; }
+  5%   { opacity: 0.12; }
+  95%  { opacity: 0.12; }
+  100% { transform: translateY(-15vh) rotate(720deg); opacity: 0; }
 }
 </style>
 </head>
@@ -351,7 +311,6 @@ h1 em {
   <div class="stat"><div class="stat-num">1</div><div class="stat-label">Track Record inclus</div></div>
 </div>
 
-<!-- MODULE 0 GRATUIT -->
 <section class="module0-section" id="module0">
   <div class="module0-inner">
     <div class="module0-badge">Vidéo de présentation · Accès gratuit</div>
@@ -446,8 +405,6 @@ h1 em {
 
 <div class="divider"></div>
 
-
-
 <section class="faq-section" id="faq">
   <div class="s-tag">Questions fréquentes</div>
   <h2 class="s-title">Ce que tu te demandes<br>sûrement</h2>
@@ -463,7 +420,6 @@ h1 em {
 
 <section class="pay-section" id="paiement">
   <div class="s-tag">Accès à la formation</div>
-  <!-- COMPARAISON PRIX -->
   <div style="background:var(--surface);border:1px solid var(--border);padding:1.5rem;margin-bottom:2.5rem">
     <div style="font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem;display:flex;align-items:center;gap:.5rem"><span style="display:block;width:.8rem;height:1px;background:var(--accent)"></span>Choisir ton mode de paiement</div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border)">
@@ -501,9 +457,9 @@ h1 em {
       </ul>
       <div class="s-tag" style="margin-bottom:.8rem">Comment procéder</div>
       <div class="steps">
-        <div class="step"><div class="step-num">1</div><div class="step-body">Copie l'adresse USDT TRC20 ci-dessous et envoie exactement <strong>574 USDT</strong>.</div></div>
+        <div class="step"><div class="step-num">1</div><div class="step-body">Copie l'adresse USDT Solana ci-contre et envoie exactement <strong>574 USDT</strong>.</div></div>
         <div class="step"><div class="step-num">2</div><div class="step-body">Prends une <strong>capture de la transaction</strong> confirmée avec le hash.</div></div>
-        <div class="step"><div class="step-num">3</div><div class="step-body">Envoie-la sur mail <strong style="color:var(--accent)"></strong></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-body">Envoie-la par mail à <span style="color:var(--accent);font-weight:500">contact.cryptomega&#64;gmail.com</span></div></div>
         <div class="step"><div class="step-num">4</div><div class="step-body">Reçois ton accès sous <strong>24h maximum</strong> (souvent en quelques heures).</div></div>
       </div>
     </div>
@@ -560,4 +516,98 @@ h1 em {
 
 <div class="toast" id="toast">Adresse copiée !</div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5
+<script>
+// Cursor glow
+const glow = document.getElementById('cursor-glow');
+document.addEventListener('mousemove', function(e) {
+  if(glow) { glow.style.left = e.clientX+'px'; glow.style.top = e.clientY+'px'; }
+});
+
+// Particles
+const canvas = document.getElementById('particles-canvas');
+if(canvas) {
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  window.addEventListener('resize', function() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+  const particles = [];
+  for(let i = 0; i < 60; i++) {
+    particles.push({
+      x: Math.random()*canvas.width, y: Math.random()*canvas.height,
+      r: Math.random()*1.5+0.3,
+      dx: (Math.random()-0.5)*0.3, dy: (Math.random()-0.5)*0.3,
+      opacity: Math.random()*0.4+0.1
+    });
+  }
+  function drawParticles() {
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    particles.forEach(function(p) {
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle='rgba(196,164,107,'+p.opacity+')';
+      ctx.fill();
+      p.x+=p.dx; p.y+=p.dy;
+      if(p.x<0||p.x>canvas.width) p.dx*=-1;
+      if(p.y<0||p.y>canvas.height) p.dy*=-1;
+    });
+    requestAnimationFrame(drawParticles);
+  }
+  drawParticles();
+}
+
+// Copy address
+function copyAddr() {
+  const t = document.getElementById('address').innerText.trim();
+  navigator.clipboard.writeText(t).then(function() {
+    const el = document.getElementById('toast');
+    el.classList.add('show');
+    setTimeout(function() { el.classList.remove('show'); }, 2500);
+  });
+}
+
+
+// Floating crypto logos
+(function(){
+  const logos = [
+    { src: 'bitcoin-btc-logo.png',   size: [36, 72] },
+    { src: 'ethereum-eth-logo.png',  size: [28, 60] },
+  ];
+  const count = 14;
+  for(let i = 0; i < count; i++){
+    const logo = logos[i % logos.length];
+    const img = document.createElement('img');
+    img.src = logo.src;
+    img.className = 'crypto-float';
+    const size = logo.size[0] + Math.random() * (logo.size[1] - logo.size[0]);
+    const delay = Math.random() * 20;
+    const duration = 12 + Math.random() * 18;
+    const left = 5 + Math.random() * 90;
+    img.style.cssText = [
+      'width:' + size + 'px',
+      'height:' + size + 'px',
+      'left:' + left + '%',
+      'bottom:-15vh',
+      'animation-duration:' + duration + 's',
+      'animation-delay:' + delay + 's',
+    ].join(';');
+    document.body.appendChild(img);
+  }
+})();
+
+// Stats observer
+const statNums = document.querySelectorAll('.stat-num');
+const observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if(entry.isIntersecting) {
+      entry.target.style.color='var(--accent2)';
+      setTimeout(function(){ entry.target.style.color='var(--accent)'; },400);
+    }
+  });
+},{ threshold: 0.5 });
+statNums.forEach(function(el){ observer.observe(el); });
+</script>
+</body>
+</html>
